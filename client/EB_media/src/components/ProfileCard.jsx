@@ -24,7 +24,11 @@ function ProfileCard() {
                     <span>followers</span>
                 </div>
             </div>
+            <hr />
         </div>
+        <span>
+            My Profile
+        </span>
     </div>
     )
 }
