@@ -4,7 +4,7 @@ import { Followers } from '../../Data/FollowersData'
 function FollowersCard() {
   return (
     <div className='FollowersCard'>
-      <h3>Who i following you</h3>
+      <h3>Who is following you</h3>
       {
         Followers.map((followers,id)=>{
           return(
@@ -16,7 +16,7 @@ function FollowersCard() {
                 <span>{followers.username}</span>
               </div>
               </div>
-              <button>
+              <button className='button fc-button'>
                 follow
               </button>
             </div>
