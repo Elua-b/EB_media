@@ -10,25 +10,30 @@ function PostShare() {
         <img src="./jackie.PNG" alt="" />
         <div>
             <input type="text" placeholder="what's happening" />
-        </div>
-        <div className="postOptions">
-            <div className="option">
+            <div className="postOptions">
+            <div className="option"
+            style={{color:"var(--photo"}}>
                 <UilScenery/>
                 photo
             </div>
-            <div className="option">
+            <div className="option"
+             style={{color:"var(--video"}}>
                 <UilPlayCircle/>
                 Video
             </div>
-            <div className="option">
+            <div className="option"
+             style={{color:"var(--location"}}>
                 <UilLocationPoint/>
                 Location
             </div>
-            <div className="option">
+            <div className="option"
+             style={{color:"var(--schedule"}}>
                 <UilSchedule/>
                 Schedule
             </div>
         </div>
+        </div>
+       
     </div>
   )
 }
