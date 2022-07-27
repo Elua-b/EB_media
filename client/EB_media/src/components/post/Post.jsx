@@ -12,6 +12,11 @@ function Post({data}) {
             <img className='icon'  src="./comment.png" alt="" />
             <img className='icon' src="./share.png" alt="" />
         </div>
+        <span>{data.likes} likes</span>
+        <div className="detail">
+            <span><b>{data.name}</b></span>
+            <span>{data.desc}</span>
+        </div>
     </div>
   )
 }
