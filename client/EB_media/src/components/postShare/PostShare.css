@@ -57,7 +57,7 @@
     cursor:pointer;
 }
 .previewImage>img{
-    width: 100%;
+    width: 600px;
     max-height: 20rem;
     object-fit: cover;
     border-radius: 0.5rem;
