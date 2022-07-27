@@ -1,6 +1,7 @@
 import React from 'react'
 import './RightSide.css'
 import {UilSetting} from '@iconscout/react-unicons'
+import TrendCard from '../trendCard/TrendCard'
 function RightSide() {
   return (
     <div className='RightSide'>
@@ -9,7 +10,8 @@ function RightSide() {
             <UilSetting/> 
             <img className='icon2' src="./not.png" alt="" />
             <img className='icon2' src="./mess.png" alt="" /> 
-        </div>        
+        </div>      
+        <TrendCard/>  
     </div>
   )
 }
