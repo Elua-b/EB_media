@@ -56,7 +56,8 @@ function PostShare() {
         </div>
         {image && [
             <div className="previewImage">
-                <UilTimes/> 
+                <UilTimes onClick={()=>setImage(null)}/> 
+                <img src={image.image} alt="" />
             </div>
         ]
 
