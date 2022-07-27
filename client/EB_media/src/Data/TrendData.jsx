@@ -1,18 +1,18 @@
 export const TrendData=[
     {
-        name:"Oliver",
+        name:"lesBugingos",
         share:97
     },
     {
-        name:"Oliver",
+        name:"lesBugingos",
         share:97
     },
     {
-        name:"Oliver",
+        name:"lesBugingos",
         share:97
     },
     {
-        name:"Oliver",
+        name:"lesBugingos",
         share:97
     },
 ]
