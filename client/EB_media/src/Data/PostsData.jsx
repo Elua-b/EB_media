@@ -18,12 +18,12 @@ export const PostData=[
         name:'Mahoro',
         desc:"Happy new year my beautiful sstr 😍😍",
         likes:2300,
-        liked:true  
+        liked:false 
     },{
         img:"./mhr.PNG",
         name:'Mahoro',
         desc:"Happy new year my beautiful sstr 😍😍",
         likes:2300,
-        liked:true  
+        liked:false  
     },
 ]
