@@ -6,7 +6,7 @@ function Post({data}) {
     const notlike="./notLike.png"
   return (
     <div className='Posts'>
-        <img src={data.img} alt="" />
+        <img className='image' src={data.img} alt="" />
         <div className="postReact">
             <img className='icon' src={data.liked?heart:notlike} alt="" />
             <img className='icon'  src="./comment.png" alt="" />
