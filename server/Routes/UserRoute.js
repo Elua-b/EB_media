@@ -9,7 +9,7 @@ const router=express.Router()
 
 router.get('/:id',getUser)
 router.put('/:id',updateUser)
-router.put('/:id',unFollowUser)
+router.put('/:id/unFollow',unFollowUser)
 router.put('/:id/follow',followUser)
 
 router.delete('/:id',deleteUser)

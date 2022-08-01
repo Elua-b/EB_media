@@ -9,15 +9,14 @@ const  dotenv =require("dotenv")
 const connection=require("./db")
 const AuthRoute=require('./Routes/AuthRoutes')
 const UserRoute=require('./Routes/UserRoute')
+const 
 const app=express();
 app.use(bodyParser.json())
 app.use(cors())
 
 app.use('/auth',AuthRoute)
 app.use('/user',UserRoute)
-app.get('/',()=>{
-    console.log("answer");
-})
+app.use('/')
 
 
 
