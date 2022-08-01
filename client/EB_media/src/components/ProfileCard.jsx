@@ -1,10 +1,11 @@
 import React from 'react'
 import './ProfileCard.css'
 function ProfileCard() {
+    const profilePage=true
   return (
     <div className="ProfileCard">
         <div className="profileImages">
-            <img src="./pic1.jpg" alt="" />
+            <img src="./cvrphoto.jfif" className='photo' alt="" />
             <img src="./pic1.jpg" alt="" />
         </div>
         <div className="ProfileName">
@@ -23,6 +24,17 @@ function ProfileCard() {
                     <span>1</span>
                     <span>followers</span>
                 </div>
+                {profilePage && (
+                    <>
+                    <div className="vl">
+
+                    </div>
+                    <div className="follow">
+                        <span>3</span>
+                        <span>posts</span>
+                    </div>
+                    </>
+                )}
             </div>
             <hr />
         </div>
