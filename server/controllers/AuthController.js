@@ -15,7 +15,7 @@ const registerUser = async (req, res) => {
     res.status(200).json(newUser);
     
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json("not done");
   }
 };
 const loginUser=async(req,res)=>{

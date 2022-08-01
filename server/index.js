@@ -15,7 +15,9 @@ app.use(cors())
 
 app.use('/auth',AuthRoute)
 app.use('/user',UserRoute)
-
+app.get('/',()=>{
+    console.log("answer");
+})
 
 
 
