@@ -2,6 +2,7 @@ import React from 'react'
 import PostSide from '../../components/postSide/PostSide'
 import ProfileCard from '../../components/ProfileCard'
 import ProfileLeft from '../../components/profileLeft/ProfileLeft'
+import RightSide from '../../components/RightSide/RightSide'
 import './Profile.css'
 
 function Profile() {
@@ -12,6 +13,7 @@ function Profile() {
         <ProfileCard/>
         <PostSide/>
       </div>
+      <RightSide/>
     </div>
   )
 }
