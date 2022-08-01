@@ -63,6 +63,14 @@ const updateUser = async (req, res) => {
       try {
         const followUser=UserModel.findById(id)
         const followingUser=UserModel.findById(currentUserId)
+        if(!followUser.followers.includes(currentUserId)){
+          await followUser.updateOne({$push : {followers:currentUserId}})
+          await followingUser.updateOne({$push:{following:id}})
+          res.status(200).json("User followed!")
+        }
+        else{
+          res.status(403).json("User is already followed by you")
+        }
       } catch (error) {
         res.status(500).json(error)
         
@@ -70,5 +78,6 @@ const updateUser = async (req, res) => {
     }
   }
 module.exports = deleteUser;
+module.exports=followUser
 module.exports = updateUser;
 module.exports = getUser;
