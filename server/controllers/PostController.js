@@ -10,4 +10,15 @@ const createPost=async(req,res)=>{
         res.status(500).json(error)
     }
 }
+const  getPost=async(req,res)=>{
+    const id=req.params.id
+    try {
+        const post=await PostModel.findById(id)
+        res.status(200).json(post)
+
+    } catch (error) {
+        res.status(500).json("not done")
+    }
+}
 module.exports=createPost
+module.exports=getPost
