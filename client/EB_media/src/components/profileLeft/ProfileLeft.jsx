@@ -2,10 +2,10 @@ import React from 'react'
 import FollowersCard from '../FollowCard/FollowersCard'
 import InfoCard from '../infoCard/InfoCard'
 import LogoSearch from '../LogoSearch/LogoSearch'
-import './ProfileLeft.css'
+import '../profileSide/ProfileSide.css'
 function ProfileLeft() {
   return (
-    <div className="ProfileLeft">
+    <div className="ProfileSide">
         <LogoSearch/>
         <InfoCard/>
         <FollowersCard/>

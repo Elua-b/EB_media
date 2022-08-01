@@ -6,21 +6,28 @@ function InfoCard() {
     <div className='InfoCard'>
       <div className="infoHead">
         <h4>Your info </h4>
-        <UilPen width='2rem' height='1.2rem'/>
+        <div>
+            <UilPen width='2rem' height='1.2rem'/>
+        </div>
       </div>
       <div className="info">
-        <span>Status</span>
+        <span>
+           <b> Status </b>
+            </span>
         <span>In Relationship</span>
       </div>
       <div className="info">
-        <span>Lives in</span>
+        <span>
+           <b> Lives in </b>
+            </span>
         <span>Kigali</span>
       </div>
       <div className="info">
-        <span>Works at</span>
+        <span>
+            <b>Works at</b>  </span>
         <span>Govtalk Company</span>
       </div>
-      <button className='button'>Logout</button>
+      <button className='button logout-button'>Logout</button>
     </div>
 
   )
