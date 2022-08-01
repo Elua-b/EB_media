@@ -12,7 +12,7 @@ function RightSide() {
             <img className='icon2' src="./mess.png" alt="" /> 
         </div>      
         <TrendCard/>  
-        <button className="button">
+        <button className="button r-button">
             Share
         </button>
     </div>
