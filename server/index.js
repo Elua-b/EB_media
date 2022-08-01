@@ -9,14 +9,14 @@ const  dotenv =require("dotenv")
 const connection=require("./db")
 const AuthRoute=require('./Routes/AuthRoutes')
 const UserRoute=require('./Routes/UserRoute')
-const 
+const PostRoute=require('./Routes/PostRouter')
 const app=express();
 app.use(bodyParser.json())
 app.use(cors())
 
 app.use('/auth',AuthRoute)
 app.use('/user',UserRoute)
-app.use('/')
+app.use('/post',PostRoute)
 
 
 
