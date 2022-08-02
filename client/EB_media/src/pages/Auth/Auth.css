@@ -10,3 +10,22 @@
     height: 60px;
     width: 60px;
 } 
+.Auth >div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.a-left{
+    gap: 2rem;
+}
+.a-left >img{
+    width: 4rem;
+    height: 4rem;
+}
+.webname>h1 {
+    font-size: 3rem;
+    
+}
+.webname>h6{
+    font-size: 0.85rem;
+}

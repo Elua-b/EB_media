@@ -6,7 +6,7 @@ function Auth() {
       <div className="a-left">
         <img src="./logo2.png" className='logo' alt="" />
         <div className="webname">
-            <h1>EB_media</h1>
+            <h1 style={{color:"#f5c32c"}}>EB_media</h1>
             <h6>Explore the ideas throughout the world</h6>
         </div>
       </div>
@@ -14,5 +14,6 @@ function Auth() {
     </div>
   )
 }
+
 
 export default Auth
