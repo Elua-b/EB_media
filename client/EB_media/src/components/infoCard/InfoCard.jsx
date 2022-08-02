@@ -4,6 +4,7 @@ import {UilPen} from '@iconscout/react-unicons'
 function InfoCard() {
   return (
     <div className='InfoCard'>
+      <h1 style={{color:"#f5c32c"}}>EB_media</h1>
       <div className="infoHead">
         <h4>Your info </h4>
         <div>

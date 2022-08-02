@@ -11,6 +11,7 @@ function ProfileCard() {
       <div className="ProfileName">
         <span>BUGINGO</span>
         <span>Eloi</span>
+        <h1 style={{color:"#f5c32c"}}>EB_media</h1>
       </div>
       <div className="followStatus">
         <hr />
