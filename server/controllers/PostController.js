@@ -1,4 +1,6 @@
+const { default: mongoose } = require('mongoose')
 const PostModel=require('../models/postModel')
+const UserModel=require('../models/userModels')
 // const mongoose=require('mongoose')
 
 const createPost=async(req,res)=>{
@@ -7,7 +9,7 @@ const createPost=async(req,res)=>{
         await newPost.save()
         res.status(200).json("post created")
     } catch (error) {
-        res.status(500).json(error)
+        res.status(500).json("not done")
     }
 }
 const  getPost=async(req,res)=>{
@@ -17,7 +19,7 @@ const  getPost=async(req,res)=>{
         res.status(200).json(post)
 
     } catch (error) {
-        res.status(500).json("not done")
+        res.status(500).json(error)
     }
 }
  const updatePost=async(req,res)=>{
@@ -53,9 +55,29 @@ const  getPost=async(req,res)=>{
         res.status(500).json(error)
     }
  }
+ const likePost=async(req,res)=>{
+    const id=req.params.id
+    const {userId}=req.body
+     try {
+       const post =await PostModel.findById(id)
+        if(!post.likes.includes(userId)){
+            await post.updateOne({$push:{likes:userId}})
+            res.status(200).json("post liked")
+        }
+        else{
+            await post.updateOne({$pull:{likes:userId}})
+            res.status(200).json("post disliked")
+        }
+     } catch (error) {
+        res.status(500).json(error)
+     }
+ }
+ 
 module.exports=createPost
 module.exports=getPost
 module.exports=updatePost
 module.exports=deletePost
+module.exports=likePost
+
 
 
