@@ -10,10 +10,21 @@ function Auth() {
             <h6>Explore the ideas throughout the world</h6>
         </div>
       </div>
-      <h1>form</h1>
+      <Signup/>
     </div>
   )
 }
-
+function Signup(){
+    return(
+        <div className="a-right">
+          <form className="infoForm">
+            <h3>Sign up</h3>
+            <div>
+                <input type="text" placeholder='First Name' className='infoInput' name='firstname'/>
+            </div>
+            </form>  
+        </div>
+    )
+}
 
 export default Auth
