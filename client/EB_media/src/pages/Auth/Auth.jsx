@@ -44,17 +44,25 @@ function Signup() {
         <div>
           <input
             type="password"
-            className="password"
+            className="infoInput"
             name="password"
             placeholder="Password"
           />
           <input
-          type="password"
-          className="password"
-          name="confirmpass"
-          placeholder="Confirm Password"
-        />
+            type="password"
+            className="infoInput"
+            name="confirmpass"
+            placeholder="Confirm Password"
+          />
         </div>
+        <div>
+          <span style={{ fontSize: "12px" }}>
+            Already have an account.Login!
+          </span>
+        </div>
+        <button className="button infoButton" type="submit">
+          Signup
+        </button>
       </form>
     </div>
   );
