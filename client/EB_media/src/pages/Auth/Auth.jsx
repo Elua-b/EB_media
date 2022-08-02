@@ -10,9 +10,45 @@ function Auth() {
           <h6>Explore the ideas throughout the world</h6>
         </div>
       </div>
-      <Signup />
+      <Login />
     </div>
   );
+}
+function Login(){
+    return (
+        <div className="a-right">
+          <form className="infoForm">
+            <h3>Log In</h3>
+           
+            <div>
+              <input
+                type="text"
+                className="infoInput"
+                name="username"
+                placeholder="Usernames"
+              />
+            </div>
+            <div>
+              <input
+                type="password"
+                className="infoInput"
+                name="password"
+                placeholder="Password"
+              />
+              
+            </div>
+            <div>
+              <span style={{ fontSize: "12px" }}>
+                Don't have an account.Signup!
+              </span>
+              <button className="button infoButton" type="submit">
+              Login
+            </button>
+            </div>
+           
+          </form>
+        </div>
+      );
 }
 function Signup() {
   return (
