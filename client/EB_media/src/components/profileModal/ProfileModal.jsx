@@ -12,23 +12,50 @@ function ProfileModal({ modalOpened, setModalOpened }) {
       }
       overlayOpacity={0.55}
       overlayBlur={3}
-      size='55%'
+      size="55%"
       opened={modalOpened}
       onClose={() => setModalOpened(false)}
     >
       <form action="" className="infoForm">
         <h3>Your info</h3>
         <div>
-            <input type="text"
-           className="infoInput"
+          <input
+            type="text"
+            className="infoInput"
             name="FirstName"
             placeholder="First Name"
-             />    
-            <input type="text"
-             className="infoInput"
-              name="LastName"
-              placeholder="Last Name"
-             />
+          />
+          <input
+            type="text"
+            className="infoInput"
+            name="LastName"
+            placeholder="Last Name"
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            className="infoInput"
+            name="worksAt"
+            placeholder="Works at"
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            className="infoInput"
+            name="livesIn"
+            placeholder="Live in"
+          />
+          <input
+            type="text"
+            className="infoInput"
+            name="Country"
+            placeholder="Country"
+          />
+        </div>
+        <div>
+          <input type="text" className="infoInput" placeholder="RelationShip Status" />
         </div>
       </form>
     </Modal>
