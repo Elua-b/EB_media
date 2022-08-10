@@ -19,7 +19,7 @@ function RightSide() {
       </button>
       <ShareModal modalOpened={modalOpened} setModalOpened={setModalOpened} />
     </div>
-  );
+  );r
 }
 
 export default RightSide;
