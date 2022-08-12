@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import "./Auth.css";
 function Auth() {
   const  [isSignup,setIsSignup]=useState(false)
+  const [data,setData]=useState({firstname:"",lastname:"" ,password:"",confirmpass:" " ,username:""})
+  const handleChange=(e)=>{
+    setData({...data,[e.target.name]:e.target.value})
+  }
   return (
     <div className="Auth">
       <div className="a-left">
@@ -55,7 +59,7 @@ function Auth() {
           
         </div>
         <div>
-          <span style={{ fontSize: "12px" }} onClick={()=>setIsSignup((prev)=>!prev)}>
+          <span style={{ fontSize: "12px",cursor:"pointer" }} onClick={()=>setIsSignup((prev)=>!prev)} >
            {isSignup ?  "Already have an account.Login!" : "Don't have an account? Sign Up"}
           </span>
         </div>
