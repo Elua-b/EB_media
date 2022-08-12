@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Auth.css";
 function Auth() {
+  const  [isSignup,setIsSignup]=useState(false)
   return (
     <div className="Auth">
       <div className="a-left">
@@ -10,65 +11,24 @@ function Auth() {
           <h6>Explore the ideas throughout the world</h6>
         </div>
       </div>
-      <Login />
-    </div>
-  );
-}
-function Login(){
-    return (
-        <div className="a-right">
-          <form className="infoForm">
-            <h3>Log In</h3>
-           
-            <div>
-              <input
-                type="text"
-                className="infoInput"
-                name="username"
-                placeholder="Usernames"
-              />
-            </div>
-            <div>
-              <input
-                type="password"
-                className="infoInput"
-                name="password"
-                placeholder="Password"
-              />
-              
-            </div>
-            <div>
-              <span style={{ fontSize: "12px" }}>
-                Don't have an account.Signup!
-              </span>
-              <button className="button infoButton" type="submit">
-              Login
-            </button>
-            </div>
-           
-          </form>
-        </div>
-      );
-}
-function Signup() {
-  return (
-    <div className="a-right">
+      <div className="a-right">
       <form className="infoForm">
-        <h3>Sign up</h3>
+        <h3>{isSignup ? "Sign up" :"Log In" }</h3>
+       {isSignup && 
         <div>
-          <input
-            type="text"
-            placeholder="First Name"
-            className="infoInput"
-            name="firstname"
-          />
-          <input
-            type="text"
-            placeholder="Last Name"
-            className="infoInput"
-            name="lastname"
-          />
-        </div>
+        <input
+          type="text"
+          placeholder="First Name"
+          className="infoInput"
+          name="firstname"
+        />
+        <input
+          type="text"
+          placeholder="Last Name"
+          className="infoInput"
+          name="lastname"
+        />
+      </div>}
         <div>
           <input
             type="text"
@@ -84,12 +44,15 @@ function Signup() {
             name="password"
             placeholder="Password"
           />
+          {isSignup &&
           <input
-            type="password"
-            className="infoInput"
-            name="confirmpass"
-            placeholder="Confirm Password"
-          />
+          type="password"
+          className="infoInput"
+          name="confirmpass"
+          placeholder="Confirm Password"
+        />
+          }
+          
         </div>
         <div>
           <span style={{ fontSize: "12px" }}>
@@ -97,9 +60,10 @@ function Signup() {
           </span>
         </div>
         <button className="button infoButton" type="submit">
-          Signup
+          { isSignup ? "Signup" : "Log In"}
         </button>
       </form>
+    </div>
     </div>
   );
 }
