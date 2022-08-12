@@ -9,9 +9,27 @@ function Auth() {
     confirmpass: " ",
     username: "",
   });
-  const [confirmPass, setConfirmPass] = useState(false);
+  const [confirmPass, setConfirmPass] = useState(true);
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (isSignup) {
+      if (data.password !== data.confirmpass) {
+        setConfirmPass(false);
+      }
+    }
+  };
+  const resetForm = () => {
+    setConfirmPass(true);
+    setData({
+      firstname: "",
+      lastname: "",
+      password: "",
+      confirmpass: " ",
+      username: "",
+    });
   };
   return (
     <div className="Auth">
@@ -84,7 +102,7 @@ function Auth() {
           <div>
             <span
               style={{ fontSize: "12px", cursor: "pointer" }}
-              onClick={() => setIsSignup((prev) => !prev)}
+              onClick={() => {setIsSignup((prev) => !prev);resetForm()}}
             >
               {isSignup
                 ? "Already have an account.Login!"
