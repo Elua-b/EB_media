@@ -55,8 +55,8 @@ function Auth() {
           
         </div>
         <div>
-          <span style={{ fontSize: "12px" }}>
-            Already have an account.Login!
+          <span style={{ fontSize: "12px" }} onClick={()=>setIsSignup((prev)=>!prev)}>
+           {isSignup ?  "Already have an account.Login!" : "Don't have an account? Sign Up"}
           </span>
         </div>
         <button className="button infoButton" type="submit">
