@@ -51,6 +51,7 @@ function Auth() {
                 className="infoInput"
                 name="firstname"
                 onChange={handleChange}
+                value={data.firstname}
               />
               <input
                 type="text"
@@ -58,6 +59,7 @@ function Auth() {
                 className="infoInput"
                 name="lastname"
                 onChange={handleChange}
+                value={data.lastname}
               />
             </div>
           )}
@@ -68,6 +70,7 @@ function Auth() {
               name="username"
               placeholder="Usernames"
               onChange={handleChange}
+              value={data.username}
             />
           </div>
           <div>
@@ -77,6 +80,7 @@ function Auth() {
               name="password"
               placeholder="Password"
               onChange={handleChange}
+              value={data.password}
             />
             {isSignup && (
               <input
@@ -85,6 +89,7 @@ function Auth() {
                 name="confirmpass"
                 placeholder="Confirm Password"
                 onChange={handleChange}
+                value={data.confirmpass}
               />
             )}
           </div>

@@ -12,7 +12,10 @@
     "@iconscout/react-unicons": "^1.1.6",
     "@mantine/core": "^5.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.2",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.15",
