@@ -19,7 +19,6 @@ app.use('/user',UserRoute)
 app.use('/post',PostRoute)
 
 
-
 // app.use(bodyParser.urlencoded({limit:'30mb',extended:true}))
 dotenv.config()
 const port=process.env.PORT || 5000;
