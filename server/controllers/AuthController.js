@@ -1,7 +1,7 @@
 const UserModel = require("../models/userModels");
 const bcrypt = require("bcrypt");
 const registerUser = async (req, res) => {
-
+const password=req.body.password
   const salt = await bcrypt.genSalt(10);
   const hashedPass = await bcrypt.hash(password, salt);
   req.body.password = hashedPass
@@ -46,7 +46,14 @@ const loginUser=async(req,res)=>{
         }
     } catch (error) {
         res.status(500).json({message:error.message});
+        
     }
+    
 }
-module.exports = registerUser;
-module.exports=loginUser;
+
+// module.exports.registerUser= registerUser;
+// module.exports.loginUser=loginUser;
+module.exports={
+  loginUser,
+  registerUser
+}
