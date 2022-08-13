@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { logIn, Signup } from "../../actions/AuthAction";
+import { logIn, signUp } from "../../actions/AuthAction";
 // import { login } from "../../api/AuthRequest";
 import "./Auth.css";
 function Auth() {
@@ -21,10 +21,12 @@ function Auth() {
     e.preventDefault();
     if (isSignup) {
       data.password === data.confirmpass
-        ? dispatch(Signup(data))
+        ? dispatch(signUp(data))
         : setConfirmPass(false);
+        console.log("done");
     }else{
       dispatch(logIn(data))
+      console.log("welo");
     }
   };
   const resetForm = () => {

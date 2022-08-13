@@ -1,4 +1,11 @@
 import axios from 'axios'
-const API=axios.create({baseURL:"http://locahost:5000"})
+const API=axios.create({baseURL:"http://localhost:5000"})
 export const logIn =(formData)=>API.post('/auth/login',formData)
+
 export const signUp =(formData)=>API.post('/auth/register',formData)
+if(signUp){
+    console.log("verified");
+}
+else{
+    console.log("not verified");
+}
