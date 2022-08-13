@@ -4,6 +4,7 @@ import { logIn, signUp } from "../../actions/AuthAction";
 // import { login } from "../../api/AuthRequest";
 import "./Auth.css";
 function Auth() {
+  
   const [isSignup, setIsSignup] = useState(false);
   const dispatch = useDispatch();
   const [data, setData] = useState({
