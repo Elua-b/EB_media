@@ -7,7 +7,8 @@ function Auth() {
   const dispatch=useDispatch();
   const loading=useSelector((state)=>state.authReducer.loading)
   const [isSignup, setIsSignup] = useState(false);
-  console.log(loading);
+  // console.log(loading);
+  
   const [data, setData] = useState({
     firstname: "",
     lastname: "",
