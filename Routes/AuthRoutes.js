@@ -7,7 +7,7 @@ const {loginUser,registerUser}=require('../controllers/AuthController')
 const router=express.Router()
 
 router.post('/register',registerUser)
-//hdjfdbmcsjbskmsns
+
 
 router.post('/login',loginUser)
  module.exports=router
