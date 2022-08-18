@@ -15,7 +15,10 @@ function PostShare() {
   const dispatch = useDispatch();
   const desc = useRef();
   const user = useSelector((state) => state.authReducer.authData);
-
+  const reset=()=>{
+    setImage(null);
+    desc.current.value=""
+  }
   const onImageChange = (event) => {
     if (event.target.files && event.target.files[0]) {
       let img = event.target.files[0];
@@ -42,6 +45,7 @@ function PostShare() {
       }
     }
     dispatch(uploadPost(newPost));
+    reset()
   };
   return (
     <div className="PostShare">
@@ -69,7 +73,7 @@ function PostShare() {
             <UilSchedule />
             Schedule
           </div>
-          <button className="button ps-button" onClick={handleSubmit}>
+          <button className="button ps-button" disable={loading} onClick={handleSubmit}>
             {loading ? "uploading..."  : "Share"}
           </button>
           <div style={{ display: "none" }}>
