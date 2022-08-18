@@ -10,6 +10,7 @@ const connection=require("./db")
 const AuthRoute=require('./Routes/AuthRoutes')
 const UserRoute=require('./Routes/UserRoute')
 const PostRoute=require('./Routes/PostRouter')
+const UploadRoute=require('./Routes/UploadRoute')
 const app=express();
 app.use(bodyParser.json())
 app.use(cors())
@@ -17,7 +18,7 @@ app.use(cors())
 app.use('/auth',AuthRoute)
 app.use('/user',UserRoute)
 app.use('/post',PostRoute)
-
+app.use('/upload',UploadRoute)
 
 // app.use(bodyParser.urlencoded({limit:'30mb',extended:true}))
 dotenv.config()
