@@ -107,12 +107,9 @@ const  getPost=async(req,res)=>{
         
     }
  }
-module.exports=createPost
-module.exports=getPost
-module.exports=updatePost
-module.exports=deletePost
-module.exports=likePost
-module.exports=getTimeLinePosts
+module.exports={
+    createPost,getPost,likePost,updatePost,deletePost,getTimeLinePosts,likePost
+}
 
 
 
