@@ -1,22 +1,24 @@
 const mongoose=require('mongoose')
+const {registerSchema}=require('swaggiffy')
+
 const Userschema=mongoose.Schema(
     {
         username:{
             type:String,
-            require:true
+            required:true
         },
 
         password:{
             type:String,
-            require:true
+            required:true
         },
         firstname:{
             type:String,
-            require:true
+            required:true
         },
         lastname:{
             type:String,
-            require:true
+            required:true
         },
         isAdmin:{
             type:Boolean,
@@ -36,3 +38,4 @@ const Userschema=mongoose.Schema(
 )
 const UserModel=mongoose.model("users",Userschema);
 module.exports=UserModel
+registerSchema("Userschema",Userschema)
