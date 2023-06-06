@@ -9,6 +9,7 @@ function Home() {
     
     <PostSide/>
     <RightSide/>
+    div
     
   </div>;
 }
