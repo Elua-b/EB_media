@@ -1,7 +1,7 @@
 const UserModel = require("../models/userModels");
 const bcrypt = require("bcrypt");
 const registerUser = async (req, res) => {
-  // const { username, password, firstname, lastname } = req.body;
+  // const { password, firstname, lastname } = req.body;
   const salt = await bcrypt.genSalt(10);
   const hashedPass = await bcrypt.hash(req.body.password, salt);
   req.body.password = hashedPass;
@@ -15,6 +15,7 @@ const registerUser = async (req, res) => {
     }
     await newUser.save();
     res.status(200).json(newUser);
+    console.log("doneeeeeeeeee");
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -22,6 +23,7 @@ const registerUser = async (req, res) => {
 const loginUser = async (req, res) => {
   const { username, password } = req.body;
 
+  
   try {
     const user = await UserModel.findOne({ username: username });
     if (user) {

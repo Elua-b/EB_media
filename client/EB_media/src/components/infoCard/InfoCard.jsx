@@ -21,7 +21,7 @@ function InfoCard() {
       </div>
       <div className="info">
         <span>
-          <b> Status </b>
+          <b> Status</b>
         </span>
         <span>In Relationship</span>
       </div>

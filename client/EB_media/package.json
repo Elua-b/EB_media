@@ -13,6 +13,7 @@
     "@iconscout/react-unicons": "^1.1.6",
     "@mantine/core": "^5.1.0",
     "axios": "^0.27.2",
+    "dotenv": "^16.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.2",
